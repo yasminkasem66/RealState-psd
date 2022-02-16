@@ -1,0 +1,104 @@
+@import "../node_modules/bootstrap/scss/functions";
+// custome variables goes here
+// colors
+$primary: #6b53ff;
+$light: #fbf5e5;
+$altlight: #f2ebfa;
+$altdark: #522192;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": #6f7471,
+  "success": #198754,
+  "info": #0dcaf0,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+  "dark": #000000,
+) !default;
+
+$custom-theme-colors: (
+  "altlight": $altlight,
+  "altdark": $altdark,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// fonts
+// font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$variable-prefix: bs- !default;
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Poppins", "Myriad Pro", Myriad, sans-serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+// stylelint-enable value-keyword-case
+$font-family-base: var(--#{$variable-prefix}font-sans-serif) !default;
+$font-family-code: var(--#{$variable-prefix}font-monospace) !default;
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root: 16px;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875; // 14px
+$font-size-lg: $font-size-base * 1.25; // 20px
+// scss-docs-end font-variables
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $font-size-base * 3,//48
+  2: $font-size-base * 2.5,//40px
+  3: $font-size-base * 1.875,//30px
+  4: $font-size-base * 2,//32px
+  5: $font-size-base * 1.75,//28px
+  6: $font-size-base * 1.5,//24 px
+  7: $font-size-base * 1.25,//20 px
+  8: $font-size-base * 1.125,//18 px
+  9: $font-size-base,//16 px
+) !default;
+
+$input-btn-font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+
+// scss-docs-end font-sizes
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0, 
+  1: $spacer * .25, //4
+  2: $spacer * .5, //8
+  3: $spacer,      //16
+  4: $spacer * 1.5, //24
+  5: $spacer * 1.875,     //30
+  6: $spacer * 3,   //48
+  7: $spacer * 4,   //64
+  8: $spacer * 5.1875,   //83
+  9: $spacer * 10.25,     //164
+) !default;
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// the new files we wanna add
+
+// @import '../node_modules/bootstrap/scss/bootstrap';
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/navbar";
+// @import "../node_modules/bootstrap/scss/buttons";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+
+
+//p-5  =>48 
