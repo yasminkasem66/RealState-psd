@@ -3,7 +3,7 @@
 // colors
 $primary: #6b53ff;
 $light: #fbf5e5;
-$altlight: #f2ebfa;
+$altlight: #f4f4f4;
 $altdark: #522192;
 
 $theme-colors: (
@@ -40,6 +40,29 @@ $font-size-root: 16px;
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-sm: $font-size-base * 0.875; // 14px
 $font-size-lg: $font-size-base * 1.25; // 20px
+
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+// $font-weight-medium:          500 !default;
+$font-weight-bold:            500 !default;
+$font-weight-bolder:          700 !default;
+// $font-weight-bolder:       bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.5 !default;  //24
+$line-height-sm:              1.125 !default;//18
+$line-height-lg:              1.875 !default;//30
+// $line-height-md:              1.125 !default;//18
+
+// $line-height-base:            1.5 !default;  //24
+// $line-height-sm:              1.25 !default;//20
+// $line-height-lg:              2 !default;//32
+
+
+
 // scss-docs-end font-variables
 // scss-docs-start font-sizes
 $font-sizes: (
@@ -54,7 +77,8 @@ $font-sizes: (
   9: $font-size-base,//16 px
 ) !default;
 
-$input-btn-font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+
+// $input-btn-font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
 
 // scss-docs-end font-sizes
 
@@ -70,6 +94,12 @@ $spacers: (
   7: $spacer * 4,   //64
   8: $spacer * 5.1875,   //83
   9: $spacer * 10.25,     //164
+  10: $spacer * 2.5,   //40
+  11: $spacer * 3.75,   //60
+  12: $spacer * 1.25,   //20
+  13: $spacer *7.625,   //122
+  14: $spacer *6.25,   //100
+
 ) !default;
 
 @import "../node_modules/bootstrap/scss/variables";
@@ -94,6 +124,7 @@ $spacers: (
 @import "../node_modules/bootstrap/scss/nav";
 @import "../node_modules/bootstrap/scss/card";
 @import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/dropdown";
 // @import "../node_modules/bootstrap/scss/buttons";
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
