@@ -1,3 +1,27 @@
+// font face
+// @font-face { 
+//   font-family: 'Poppins'; 
+//   font-weight: normal;
+//   font-style: normal;
+//   src: url('./fonts/Popins-font-2/Poppins-Regular.ttf')   format('truetype'); 
+//   }
+  
+//   @font-face { 
+//   font-family: 'Poppins'; 
+//   font-weight: bold;
+//   font-style: normal;
+//   src: url('./fonts/Popins-font-2/Poppins-Bold.ttf')   format('truetype'); 
+//   }
+  
+//   @font-face { 
+//   font-family: 'Poppins'; 
+//   font-weight:300;
+//   font-style: italic;
+//   src: url('./fonts/Popins-font-2/Poppins-Light.ttf')   format('truetype'); 
+//   }
+ // end font face
+
+//  start customizing bootstrap
 @import "../node_modules/bootstrap/scss/functions";
 // custome variables goes here
 // colors
@@ -102,6 +126,7 @@ $spacers: (
   14: $spacer *6.25,   //100
   15: $spacer *12.5,   //200
   16: $spacer *1.75,   //28
+  17: $spacer *4.5625,   //73
 ) !default;
 
 
@@ -109,6 +134,8 @@ $spacers: (
 $position-values: (
   0: 0,
   50: 50%,
+  55: 55%,
+  60: 60%,
   3:3%,
   4:4%,
   5:5%,
@@ -124,13 +151,16 @@ $position-values: (
 ) !default;
 // scss-docs-end position-map
 // scss-docs-start container-max-widths
+
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
+  // sm: 540px,
+  // md: 720px,
+  sm: 600px,
+  md: 800px,
   lg: 960px,
-  xl: 900px,
-  xxl: 1197px
-) !default;
+  xl: 1140px,
+  xxl: 1172px
+);
 // scss-docs-end container-max-widths
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -154,12 +184,59 @@ $container-max-widths: (
 @import "../node_modules/bootstrap/scss/nav";
 @import "../node_modules/bootstrap/scss/card";
 @import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/nav";
 @import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/carousel";
 // @import "../node_modules/bootstrap/scss/buttons";
 
 // 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
 
+//  end customizing bootstrap
 
 
-//p-5  =>48 
+
+// start custome code
+.dropdown-item.active, .dropdown-item:active {
+  background-color:#b9b5d7;
+}
+
+.read-more {
+  letter-spacing: -.6px;
+}
+.read-more2 {
+  letter-spacing: -1.3px;
+}
+
+
+img:hover ,
+a:hover{
+  cursor: pointer;
+  opacity:.7;
+  transition: all .8s ease-in-out;
+}
+
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: 0px;
+  cursor: pointer;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  // opacity: 0.5;
+  // transition: opacity 0.6s ease;
+}
+
+
+// end custome code 
