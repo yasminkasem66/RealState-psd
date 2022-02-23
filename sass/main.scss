@@ -1,0 +1,242 @@
+// font face
+// @font-face { 
+//   font-family: 'Poppins'; 
+//   font-weight: normal;
+//   font-style: normal;
+//   src: url('./fonts/Popins-font-2/Poppins-Regular.ttf')   format('truetype'); 
+//   }
+  
+//   @font-face { 
+//   font-family: 'Poppins'; 
+//   font-weight: bold;
+//   font-style: normal;
+//   src: url('./fonts/Popins-font-2/Poppins-Bold.ttf')   format('truetype'); 
+//   }
+  
+//   @font-face { 
+//   font-family: 'Poppins'; 
+//   font-weight:300;
+//   font-style: italic;
+//   src: url('./fonts/Popins-font-2/Poppins-Light.ttf')   format('truetype'); 
+//   }
+ // end font face
+
+//  start customizing bootstrap
+@import "../node_modules/bootstrap/scss/functions";
+// custome variables goes here
+// colors
+$primary: #6b53ff;
+$light: #fbf5e5;
+$altlight: #f4f4f4;
+$altdark: #522192;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": #6f7471,
+  "success": #198754,
+  "info": #0dcaf0,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #f8f9fa,
+  "dark": #000000,
+) !default;
+
+$custom-theme-colors: (
+  "altlight": $altlight,
+  "altdark": $altdark,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// fonts
+// font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$variable-prefix: bs- !default;
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: "Poppins", "Myriad Pro", Myriad, sans-serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+// stylelint-enable value-keyword-case
+$font-family-base: var(--#{$variable-prefix}font-sans-serif) !default;
+$font-family-code: var(--#{$variable-prefix}font-monospace) !default;
+// $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
+// $font-size-base affects the font size of the body text
+$font-size-root: 16px;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * 0.875; // 14px
+$font-size-lg: $font-size-base * 1.25; // 20px
+
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+// $font-weight-medium:          500 !default;
+$font-weight-bold:            500 !default;
+$font-weight-bolder:          700 !default;
+// $font-weight-bolder:       bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.5 !default;  //24
+$line-height-sm:              1.125 !default;//18
+$line-height-lg:              1.875 !default;//30
+// $line-height-md:              1.125 !default;//18
+
+// $line-height-base:            1.5 !default;  //24
+// $line-height-sm:              1.25 !default;//20
+// $line-height-lg:              2 !default;//32
+
+
+
+// scss-docs-end font-variables
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $font-size-base * 3,//48
+  2: $font-size-base * 2.5,//40px
+  3: $font-size-base * 1.875,//30px
+  4: $font-size-base * 2,//32px
+  5: $font-size-base * 1.75,//28px
+  6: $font-size-base * 1.5,//24 px
+  7: $font-size-base * 1.25,//20 px
+  8: $font-size-base * 1.125,//18 px
+  9: $font-size-base,//16 px
+  10: $font-size-base*.875,//14 px
+) !default;
+
+
+// $input-btn-font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+
+// scss-docs-end font-sizes
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0, 
+  1: $spacer * .25, //4
+  2: $spacer * .5, //8
+  3: $spacer,      //16
+  4: $spacer * 1.5, //24
+  5: $spacer * 1.875,     //30
+  6: $spacer * 3,   //48
+  7: $spacer * 4,   //64
+  8: $spacer * 5.1875,   //83
+  9: $spacer * 10.25,     //164
+  10: $spacer * 2.5,   //40
+  11: $spacer * 3.75,   //60
+  12: $spacer * 1.25,   //20
+  13: $spacer *7.625,   //122
+  14: $spacer *6.25,   //100
+  15: $spacer *12.5,   //200
+  16: $spacer *1.75,   //28
+  17: $spacer *4.5625,   //73
+) !default;
+
+
+// scss-docs-start position-map
+$position-values: (
+  0: 0,
+  50: 50%,
+  55: 55%,
+  60: 60%,
+  3:3%,
+  4:4%,
+  5:5%,
+  10:10%,
+  20:20%,
+  25:25%,
+  29:28.5%,
+  33:33%,
+  35:35%,
+  45:45%,
+  40:40%,
+  100: 100%
+) !default;
+// scss-docs-end position-map
+// scss-docs-start container-max-widths
+
+$container-max-widths: (
+  // sm: 540px,
+  // md: 720px,
+  sm: 600px,
+  md: 800px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1172px
+);
+// scss-docs-end container-max-widths
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// the new files we wanna add
+
+// @import '../node_modules/bootstrap/scss/bootstrap';
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/carousel";
+// @import "../node_modules/bootstrap/scss/buttons";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+//  end customizing bootstrap
+
+
+
+// start custome code
+.dropdown-item.active, .dropdown-item:active {
+  background-color:#b9b5d7;
+}
+
+.read-more {
+  letter-spacing: -.6px;
+}
+.read-more2 {
+  letter-spacing: -1.3px;
+}
+
+
+img:hover ,
+a:hover{
+  cursor: pointer;
+  opacity:.7;
+  transition: all .8s ease-in-out;
+}
+
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: 0px;
+  cursor: pointer;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  // opacity: 0.5;
+  // transition: opacity 0.6s ease;
+}
+
+
+// end custome code 
